@@ -1,0 +1,45 @@
+.backgroundWave {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    background: url("/assets/stretch-wave.svg") no-repeat center center; /* Centrer l'image */
+    background-size: cover; /* L'image prend toute la largeur et hauteur */
+}
+.imageBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer {
+    position: relative;
+    width: 300px;
+    height: 500px; 
+    overflow: hidden;
+}
+
+.hoverImage {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.imageContainer:hover .hoverImage {
+    opacity: 0.4; 
+}
+
+.imageContainer:hover .overlay {
+    opacity: 1; 
+}

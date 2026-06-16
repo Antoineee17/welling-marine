@@ -1,0 +1,246 @@
+.trimaranPage {
+  padding: 60px 20px;
+}
+
+/* CAROUSEL */
+.carousel {
+  text-align: center;
+}
+
+.mainImage {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.carouselWrapper {
+  position: relative;
+}
+
+/* IMAGE */
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* BOUTONS */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 12px 16px;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* POSITIONS */
+.leftBtn {
+  left: 15px;
+}
+
+.rightBtn {
+  right: 15px;
+}
+
+/* HOVER */
+.carouselWrapper:hover .navButton {
+  opacity: 1;
+}
+
+/* DOTS */
+.carousel-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.carousel-controls button {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.carousel-controls .activeDot {
+  background: #000;
+}
+
+.carousel-controls button {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+}
+
+/* LAYOUT */
+.trimaran-content {
+  display: flex;
+  gap: 60px;
+  margin-top: 60px;
+ /* background: url("/assets/background-design-color.svg") no-repeat; Centrer l'image */
+    /* background-size:contain;L'image prend toute la largeur et hauteur */
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+}
+
+.versionImage {
+  width: 100%;;
+  max-width: 500px;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+
+/* Conteneur principal */
+.caracteristiques-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligné à gauche comme sur l'image */
+  gap: 30px;
+  padding: 20px;
+  font-family: sans-serif; /* À adapter selon ta police */
+}
+
+/* Le Titre avec les ancres */
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-wrapper h2 {
+  color: #0D0D30; /* Ton bleu */
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.anchor-icon {
+  color: #0D0D30;
+  width: 40px;
+  height: 40px;
+}
+
+/* Conteneur des boutons */
+.version-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.individual-button {
+  background-color: #0D0D30;
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+/* État Actif (Orange) */
+.individual-button.active {
+  background-color: #FFA76C;
+  color: #0D0D30;
+}
+
+.individual-button:hover:not(.active) {
+  opacity: 0.9;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+}
+
+/* GRID */
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ITEM */
+.spec {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.spec-label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.spec-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+.featureSection {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* ROW */
+.featureRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* INVERSION */
+.featureRow.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE WRAPPER */
+.featureImageWrapper {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* IMAGE */
+.featureImage {
+  width: 80%;
+  height: 80%;
+    border-radius: 50%;
+
+  object-fit: cover;
+}
+
+/* TEXTE */
+.featureText {
+  max-width: 500px;
+}
+
+.featureText h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.featureText p {
+  font-size: 16px;
+  line-height: 1.6;
+}
