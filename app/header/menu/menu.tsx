@@ -51,7 +51,7 @@ export default function Menu() {
         <li className={styles.logoItem}>
           <Link href="/">
             <Image
-              src="/logo_welling_marine.jpg"
+              src="/assets/logo_welling_marine.jpg"
               alt={t(locale, 'site.logoAlt')}
               width={150}
               height={150}

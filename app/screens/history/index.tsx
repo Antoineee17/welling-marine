@@ -1,38 +1,43 @@
-import "./styles.css";
+import styles from "./styles.module.css";
+
 export default function History() {
   return (
-    <main>
-      <section className="hero" />
+    <main className={styles.main}>
+      <section className={styles.hero} />
 
-      <section className="wave-section">
-        <div className="wave-content">
-          <div className="wave-left">
-            <h2 className="first-title">Comment vous êtes venus l'idée de faire ce projet</h2>
-            <span className="divider-line" />
-            <p>
+      <section className={styles["wave-section"]}>
+        <div className={styles["wave-content"]}>
+          <div className={styles["wave-left"]}>
+            <h2 className={styles["first-title"]}>
+              Comment vous êtes venus l'idée de faire ce projet
+            </h2>
+            <span className={styles["divider-line"]} />
+            <p className={styles["p-description"]}>
               Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipiscing elit.
             </p>
           </div>
 
-          <div className="wave-right">
+          <div className={styles["wave-right"]}>
             <img
               src="/assets/boat_home.png"
               alt="Boat"
-              className="wave-image"
+              className={styles["wave-image"]}
             />
           </div>
         </div>
-        <div className="background" />
+        <div className={styles.background} />
       </section>
-      <section className="description-home">
-        <div className="description-content">
-          {/* LIGNE PRINCIPALE */}
-          <div className="description-row reverse">
-            <div className="wave-left">
-              <h2 className="second-title">Pourquoi le Well 53 devrait exister.</h2>
-              <span className="divider-line" />
-              <p className="p-description">
+
+      <section className={styles["description-home"]}>
+        <div className={styles["description-content"]}>
+          <div className={`${styles["description-row"]} ${styles.reverse}`}>
+            <div className={styles["wave-left"]}>
+              <h2 className={styles["second-title"]}>
+                Pourquoi le Well 53 devrait exister.
+              </h2>
+              <span className={styles["divider-line"]} />
+              <p className={styles["p-description"]}>
                 Chaque bateau naît d’une idée. Mais certains naissent surtout
                 d’une expérience accumulée au fil des années. En travaillant
                 dans la construction navale depuis l’âge de 19 ans, au cœur des
@@ -47,11 +52,11 @@ export default function History() {
               </p>
             </div>
 
-            <div className="wave-right">
+            <div className={styles["wave-right"]}>
               <img
                 src="/assets/boat_home.png"
                 alt="Boat"
-                className="wave-image"
+                className={styles["wave-image"]}
               />
             </div>
           </div>
