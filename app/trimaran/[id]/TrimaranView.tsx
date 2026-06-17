@@ -1,6 +1,6 @@
 "use client";
 import { Anchor } from 'lucide-react';
-import { optimisticKey, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 export default function TrimaranView({ trimaran }: any) {
   const [current, setCurrent] = useState(0);
@@ -59,7 +59,7 @@ export default function TrimaranView({ trimaran }: any) {
 
   {/* Groupe de boutons */}
   <div className="version-buttons">
-    {trimaran.versions.map((_: any, i: string | number | bigint | ((prevState: number) => number) | optimisticKey | null | undefined) => (
+    {trimaran.versions.map((_: any, i: number) => (
       <button
         key={i}
         className={`individual-button ${version === i ? 'active' : ''}`}

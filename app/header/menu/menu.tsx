@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import styles from './menu.module.css';
 import { getLocaleFromSearchParams, t, Locale } from '@/app/i18n';
+import { Suspense } from 'react';
 
 type NavItem = {
   labelKey: string;
@@ -26,8 +27,13 @@ export default function Menu() {
   const searchParams = useSearchParams();
   const locale = getLocaleFromSearchParams(searchParams);
 
+  
+
   return (
     <nav aria-label="Main Menu" className={styles.siteMenu}>
+      <Suspense fallback={null}>
+  <Menu />
+</Suspense>
       <ul className={styles.list}>
         {navLeft.map((item) => {
           const isActive = pathname === item.href;

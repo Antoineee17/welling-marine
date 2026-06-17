@@ -1,20 +1,23 @@
 "use client"; // Obligatoire pour utiliser les states
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import './contact.css';
 
 const Contact = () => {
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState<null | 'sending' | 'success' | 'error'>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
+    const form = e.currentTarget;
+    const formEntries = new FormData(form);
+
     const formData = {
-      firstname: e.target.firstname.value,
-      lastname: e.target.lastname.value,
-      phone: e.target.phone.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
+      firstname: formEntries.get('firstname')?.toString() || '',
+      lastname: formEntries.get('lastname')?.toString() || '',
+      phone: formEntries.get('phone')?.toString() || '',
+      email: formEntries.get('email')?.toString() || '',
+      message: formEntries.get('message')?.toString() || '',
     };
 
     const response = await fetch('/api/send', {
@@ -25,7 +28,7 @@ const Contact = () => {
 
     if (response.ok) {
       setStatus('success');
-      e.target.reset();
+      form.reset();
     } else {
       setStatus('error');
     }
@@ -33,6 +36,7 @@ const Contact = () => {
 
   return (
     <div className="form-container">
+      
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="form-group">
