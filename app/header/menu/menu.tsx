@@ -31,9 +31,7 @@ export default function Menu() {
 
   return (
     <nav aria-label="Main Menu" className={styles.siteMenu}>
-      <Suspense fallback={null}>
-  <Menu />
-</Suspense>
+     
       <ul className={styles.list}>
         {navLeft.map((item) => {
           const isActive = pathname === item.href;
