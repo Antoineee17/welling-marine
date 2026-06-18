@@ -77,7 +77,7 @@ export default function Innovation() {
                 Cette simplicité permet de se concentrer sur l’essentiel : le
                 plaisir de naviguer. Elle s’exprime aussi dans des choix de
                 design épurés, intégrant notamment une ouverture panoramique
-                pour une grosse luminosité ainsi que pour les flotteurs.
+                pour une grande luminosité ainsi que pour les flotteurs.
               </p>
             </div>
 
@@ -122,7 +122,7 @@ export default function Innovation() {
                 mise en avant de la performance et qui inclut plus de confort du
                 fait de sa superficie plus large permet de profiter pleinement
                 de chaque instant à bord. L’ouverture panoramique pour une
-                grosse luminosité ainsi que pour les flotteurs renforce cette
+                grande luminosité ainsi que pour les flotteurs renforce cette
                 connexion avec l’environnement, offrant une immersion totale
                 entre mer, ciel et navigation.
               </p>

@@ -9,12 +9,40 @@ export default function History() {
         <div className={styles["wave-content"]}>
           <div className={styles["wave-left"]}>
             <h2 className={styles["first-title"]}>
-              Comment vous êtes venus l'idée de faire ce projet
+              Comment vous êtes venus l'idée de faire ce projet ?
             </h2>
-            <span className={styles["divider-line"]} />
-            <p className={styles["p-description"]}>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
+            <p className={styles["p-main-description"]}>
+              Développer mes propres bateaux n’a jamais été une simple idée
+              passagère: c’est l’objectif d’une vie. Porter en soi une vision
+              précise de l’architecture navale et vouloir la concrétiser est une
+              chose, mais transformer cette intention en réalité exige une
+              alchimie humaine bien particulière.
+            </p>
+            <h3
+              className={styles["substitle"]}
+            >
+              Une rencontre charnière
+            </h3>
+            <p className={styles["p-main-description"]}>
+              Le véritable déclic de cette aventure est né d'une synergie. La
+              rencontre avec Sébastien Follain et Nicolas Purnu a été l’élément
+              fédérateur et le tournant charnière de ce projet. Autour d'une
+              vision commune, nos compétences et nos passions se sont alignées
+              pour donner une impulsion décisive à ce qui n'était alors qu'un
+              dessein personnel.
+            </p>
+
+            <h3
+              className={styles["substitle"]}
+            >
+              Le début d'une nouvelle ère
+            </h3>
+            <p className={styles["p-main-description"]}>
+              Nous n’en sommes aujourd’hui qu’aux prémices de l’aventure, mais
+              notre conviction est absolue : ce projet va révolutionner le monde
+              du multicoque de croisière rapide. Nous ne construisons pas
+              seulement un nouveau modèle, nous redéfinissons l'expérience de la
+              navigation au large.
             </p>
           </div>
 
@@ -36,7 +64,6 @@ export default function History() {
               <h2 className={styles["second-title"]}>
                 Pourquoi le Well 53 devrait exister.
               </h2>
-              <span className={styles["divider-line"]} />
               <p className={styles["p-description"]}>
                 Chaque bateau naît d’une idée. Mais certains naissent surtout
                 d’une expérience accumulée au fil des années. En travaillant

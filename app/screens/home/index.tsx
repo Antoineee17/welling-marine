@@ -95,6 +95,7 @@ export default function Home() {
               <div>
                 <p className="contact-label">PAR TÉLÉPHONE</p>
                 <p className="contact-value">06 35 23 12 45</p>
+                <p className="contact-value">07 83 26 17 61</p>
               </div>
             </div>
 

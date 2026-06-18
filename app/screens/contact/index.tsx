@@ -64,7 +64,8 @@ const Contact = () => {
           <textarea 
             name="message"
             className="textarea-message"
-            defaultValue="Bonjour, j'aimerais un welling marine sur mesure."
+            placeholder="Bonjour, j'aimerais un welling marine sur mesure."
+            required
           />
         </div>
 

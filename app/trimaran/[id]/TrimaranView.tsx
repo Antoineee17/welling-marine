@@ -121,7 +121,7 @@ export default function TrimaranView({ trimaran }: any) {
             <h2>Confort à bord</h2>
             <p>
               Des espaces de vie spacieux et lumineux pensés pour la navigation
-              longue durée.
+              longue durée. Une personnalisation possible pour répondre aux besoins spécifiques de chaque propriétaire.
             </p>
           </div>
         </div>

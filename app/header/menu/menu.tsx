@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import styles from './menu.module.css';
 import { getLocaleFromSearchParams, t, Locale } from '@/app/i18n';
-import { Suspense } from 'react';
 
 type NavItem = {
   labelKey: string;
