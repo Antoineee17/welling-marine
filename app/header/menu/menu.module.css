@@ -4,6 +4,8 @@
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
   position: sticky;
+  top: 0; /* Assure que le menu reste en haut */
+  z-index: 1000; /* Assure que le menu passe au-dessus du contenu */
   backdrop-filter: blur(8px);
 }
 
@@ -15,15 +17,6 @@
   margin: 0;
   padding: 0.75rem 1rem;
   list-style: none;
-}
-
-.logoLink {
-  display: inline-flex;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
 }
 
 .logoItem {
@@ -40,9 +33,6 @@
 }
 
 .link {
-  width: 100%;
-}
-.link {
   position: relative;
   color: var(--color-blue);
   text-decoration: none;
@@ -51,6 +41,7 @@
   display: inline-block;
   border-bottom: 2px solid var(--color-light-blue);
   transition: color 0.2s ease;
+  width: 100%;
 }
 
 .link::after {
@@ -83,7 +74,110 @@
   transform: scaleX(1);
 }
 
-.list{
-    justify-content: center;
+/* --- NOUVEAUTÉS RESPONSIVE & MENU BURGER --- */
+
+.mobileHeader {
+  display: none; /* Caché sur bureau par défaut */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-night-blue, #000); /* Couleur de secours noire */
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
+}
+
+/* --- ANIMATION DU BOUTON BURGER --- */
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* --- MEDIA QUERY MOBILE (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .siteMenu {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  /* Affichage du header avec Logo + Burger */
+  .mobileHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 1001; /* Doit être au-dessus du menu glissant */
+  }
+
+  /* On cache le logo central du bureau */
+  .logoItem {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Styling du menu ouvert sur mobile */
+  .list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    
+    /* Variables de l'animation de base (menu fermé) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* État lorsque le menu est ouvert */
+  .list.menuOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .item {
+    min-width: unset;
+    width: 80%;
+  }
+
+  .link {
+    font-size: 1.25rem; /* On grossit légèrement le texte sur mobile */
+  }
 }

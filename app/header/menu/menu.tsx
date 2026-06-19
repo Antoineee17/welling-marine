@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -25,13 +26,47 @@ export default function Menu() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const locale = getLocaleFromSearchParams(searchParams);
-
   
+  // État pour gérer l'ouverture du menu mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav aria-label="Main Menu" className={styles.siteMenu}>
-     
-      <ul className={styles.list}>
+      
+      {/* HEADER MOBILE (Visible uniquement sur téléphone) */}
+      <div className={styles.mobileHeader}>
+        <Link href="/" onClick={closeMenu} className={styles.mobileLogo}>
+          <Image
+            src="/assets/logo_welling_marine.jpg"
+            alt={t(locale, 'site.logoAlt')}
+            width={80} // Légèrement plus petit pour le mobile
+            height={80}
+          />
+        </Link>
+        
+        {/* BOUTON BURGER ANIMÉ */}
+        <button 
+          className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+        </button>
+      </div>
+
+      {/* LISTE DE NAVIGATION */}
+      <ul className={`${styles.list} ${isMenuOpen ? styles.menuOpen : ''}`}>
         {navLeft.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -40,6 +75,7 @@ export default function Menu() {
                 href={item.href}
                 className={`${styles.link} ${isActive ? styles.active : ''}`.trim()}
                 aria-current={isActive ? 'page' : undefined}
+                onClick={closeMenu} // Ferme le menu au clic sur mobile
               >
                 {t(locale, item.labelKey)}
               </Link>
@@ -47,8 +83,9 @@ export default function Menu() {
           );
         })}
 
+        {/* LOGO BUREAU (Caché sur mobile) */}
         <li className={styles.logoItem}>
-          <Link href="/">
+          <Link href="/" onClick={closeMenu}>
             <Image
               src="/assets/logo_welling_marine.jpg"
               alt={t(locale, 'site.logoAlt')}
@@ -66,6 +103,7 @@ export default function Menu() {
                 href={item.href}
                 className={`${styles.link} ${isActive ? styles.active : ''}`.trim()}
                 aria-current={isActive ? 'page' : undefined}
+                onClick={closeMenu} // Ferme le menu au clic sur mobile
               >
                 {t(locale, item.labelKey)}
               </Link>

@@ -14,19 +14,26 @@ export default function Footer() {
 
         <div className="footer-right">
           <h3>Contacts</h3>
-          <p>
-            Email :{" "}
-            <a href="mailto:contact@welling-marine.fr">
-              contact@welling-marine.fr
-            </a>
-          </p>
-          <p>
-            Tel :{" "}
+          <div
+            style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}
+          >
+            <span>Mail :</span>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <a href="mailto:contact@welling-marine.fr">
+                contact@welling-marine.fr
+              </a>
+              <a href="mailto:contact@3lignes.fr">contact@3lignes.fr</a>
+            </div>
+          </div>
+          <div
+            style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}
+          >
+            <span>Tel :</span>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <a href="tel:+33635231245">+33 6 35 23 12 45</a>
               <a href="tel:+33783261761">+33 7 83 26 17 61</a>
             </div>
-          </p>
+          </div>
         </div>
       </div>
 

@@ -220,6 +220,13 @@
   .wave-image {
     max-width: 320px;
   }
+    .background {
+    padding: 60px 20px 40px;
+  }
+  .background::before {
+    height: 250px; 
+    background-size: 100% 100%; 
+  }
 
   .hero-title {
     font-size: 2rem;
