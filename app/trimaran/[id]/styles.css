@@ -244,3 +244,91 @@
   font-size: 16px;
   line-height: 1.6;
 }
+/* =========================================
+   RESPONSIVE MOBILE & TABLETTE (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  /* 1. Espacements généraux */
+  .trimaranPage {
+    padding: 30px 15px;
+  }
+
+  /* 2. Carousel - Rendre les flèches visibles sur mobile (pas de survol possible en tactile) */
+  .navButton {
+    opacity: 0.7;
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+  .leftBtn {
+    left: 5px;
+  }
+  .rightBtn {
+    right: 5px;
+  }
+
+  /* 3. Disposition principale : on empile Gauche et Droite */
+  .trimaran-content {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  /* 4. Section Caractéristiques (Gauche) */
+  .title-wrapper h2 {
+    font-size: 1.2rem; /* Titre plus petit */
+  }
+  .anchor-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .version-buttons {
+    flex-direction: column; /* Boutons l'un sous l'autre sur mobile */
+    width: 100%;
+  }
+  .individual-button {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  /* L'image pivotée pose souvent des problèmes de débordement sur mobile. 
+     On annule la rotation et on limite sa taille. */
+  .versionImage {
+    transform: none; 
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* 5. Grille des spécifications (Droite) */
+  .spec-grid {
+    grid-template-columns: 1fr; /* 1 seule colonne au lieu de 2 */
+    gap: 15px;
+  }
+
+  /* 6. Section des "Features" (Alternance texte/image) */
+  .featureSection {
+    margin-top: 60px;
+    gap: 60px; /* Moins d'écart entre les blocs */
+  }
+
+  /* On empile tout dans le même sens sur mobile (image en haut, texte en bas) */
+  .featureRow,
+  .featureRow.reverse {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  /* On supprime la taille fixe de 500px qui casse l'écran mobile */
+  .featureImageWrapper {
+    width: 100%;
+    max-width: 300px;
+    height: 300px; /* On garde un ratio carré pour le border-radius: 50% */
+    margin: 0 auto;
+  }
+
+  .featureText h2 {
+    font-size: 28px;
+  }
+}

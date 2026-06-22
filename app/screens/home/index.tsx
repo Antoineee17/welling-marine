@@ -1,6 +1,9 @@
-﻿import "./home.css";
+﻿'use client';
+import { useIsMobile } from "@/app/hook/useIsMobile";
+import "./home.css";
 
 export default function Home() {
+  const isMobile = useIsMobile();
   return (
     <main>
       <section className="hero">
@@ -35,7 +38,7 @@ export default function Home() {
       <section className="wave-section">
         <div className="wave-content">
           <h2 className="first-title">Le voyage commence ici</h2>
-          <span className="divider-line" />
+          {isMobile ?<></>: <span className="divider-line" />}
           <p className="first-description">
             Naviguer n’est plus seulement une question de destination, mais une
             nouvelle manière d’habiter l’instant. Avec nos trimarans, nous avons

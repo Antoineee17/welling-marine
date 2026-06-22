@@ -74,3 +74,25 @@
   background-color: #FFA76C;
   color: white;
 }
+/* =========================================
+   RESPONSIVE MOBILE (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  /* 1. Réduction des marges internes pour laisser plus de place aux champs */
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  /* 2. Passage de 2 colonnes à 1 seule colonne */
+  .row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Écart légèrement réduit entre les champs empilés */
+    margin-bottom: 1.5rem;
+  }
+
+  /* 3. (Optionnel) Le bouton prend toute la largeur pour être plus facile à cliquer */
+  .btn-submit {
+    width: 100%;
+    padding: 1rem;
+  }
+}
