@@ -20,7 +20,7 @@ export default function Footer() {
             <span>Mail :</span>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <a href="mailto:contact@welling-marine.fr">
-                contact@welling-marine.fr
+                contact@welling-marine.com
               </a>
               <a href="mailto:contact@3lignes.fr">contact@3lignes.fr</a>
             </div>

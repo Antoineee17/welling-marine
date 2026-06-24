@@ -33,7 +33,7 @@ const TRIMARANS = [
     ],
     specs: {
       longueur: "16 m",
-      largeur: "8 m",
+      largeur: "9.97 m",
       coque: "15 m",
       tirant: "1.2 m",
       gv: "120 m²",

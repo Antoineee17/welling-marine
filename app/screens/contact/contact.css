@@ -4,6 +4,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  border-radius: 15px;
 }
 
 .form-group {
@@ -43,13 +44,15 @@
 }
 
 .textarea-message {
-  background-color: white;
-  border: none;
+  background-color: #0D0D30;
+  border: #FFA76C 1px solid;
+  color: white;
   padding: 1rem;
   min-height: 150px;
   resize: none;
   font-family: sans-serif;
   outline: none;
+  border-radius: 15px;
 }
 
 .submit-container {

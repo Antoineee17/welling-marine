@@ -50,7 +50,7 @@ export default function Home() {
           </p>
         </div>
 
-        <img src="/assets/boat_home.png" alt="Boat" className="wave-image" />
+        <img src="/assets/53/03.jpg" alt="Boat" className="wave-image" />
       </section>
       <div className="background" />
       <section className="description-home">
@@ -74,7 +74,7 @@ export default function Home() {
 
             <div className="wave-right">
               <img
-                src="/assets/boat_home.png"
+                src="/assets/53/04.jpg"
                 alt="Boat"
                 className="wave-image"
               />

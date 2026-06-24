@@ -28,7 +28,7 @@ export default function Innovation() {
 
           <div className={styles["wave-right"]}>
             <img
-              src="/assets/boat_home.png"
+              src="/assets/53/05.jpg"
               alt="Boat"
               className={styles["wave-image"]}
             />
@@ -60,7 +60,7 @@ export default function Innovation() {
 
             <div className={styles["wave-right"]}>
               <img
-                src="/assets/boat_home.png"
+                src="/assets/53/03.jpg"
                 alt="Boat"
                 className={styles["wave-image"]}
               />
@@ -83,7 +83,7 @@ export default function Innovation() {
 
             <div className={styles["wave-right"]}>
               <img
-                src="/assets/boat_home.png"
+                src="/assets/53/06.jpg"
                 alt="Boat"
                 className={styles["wave-image"]}
               />
@@ -106,7 +106,7 @@ export default function Innovation() {
 
             <div className={styles["wave-right"]}>
               <img
-                src="/assets/boat_home.png"
+                src="/assets/53/3131.jpg"
                 alt="Boat"
                 className={styles["wave-image"]}
               />
@@ -130,7 +130,7 @@ export default function Innovation() {
 
             <div className={styles["wave-right"]}>
               <img
-                src="/assets/boat_home.png"
+                src="/assets/53/04.jpg"
                 alt="Boat"
                 className={styles["wave-image"]}
               />

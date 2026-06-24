@@ -1,5 +1,5 @@
 "use client";
-import { Anchor } from 'lucide-react';
+import { Anchor } from "lucide-react";
 import { useState } from "react";
 import "./styles.css";
 export default function TrimaranView({ trimaran }: any) {
@@ -49,28 +49,26 @@ export default function TrimaranView({ trimaran }: any) {
         </div>
       </div>
       <section className="caracteristiques-section">
-  
-  {/* Titre avec les icônes */}
-  <div className="title-wrapper">
-    <Anchor className="anchor-icon" strokeWidth={3} />
-    <h2>Caractéristiques</h2>
-    <Anchor className="anchor-icon" strokeWidth={3} />
-  </div>
+        {/* Titre avec les icônes */}
+        <div className="title-wrapper">
+          <Anchor className="anchor-icon" strokeWidth={3} />
+          <h2>Caractéristiques</h2>
+          <Anchor className="anchor-icon" strokeWidth={3} />
+        </div>
 
-  {/* Groupe de boutons */}
-  <div className="version-buttons">
-    {trimaran.versions.map((_: any, i: number) => (
-      <button
-        key={i}
-        className={`individual-button ${version === i ? 'active' : ''}`}
-        onClick={() => setVersion(i)}
-      >
-        Version {i + 1}
-      </button>
-    ))}
-  </div>
-
-</section>
+        {/* Groupe de boutons */}
+        <div className="version-buttons">
+          {trimaran.versions.map((_: any, i: number) => (
+            <button
+              key={i}
+              className={`individual-button ${version === i ? "active" : ""}`}
+              onClick={() => setVersion(i)}
+            >
+              Version {i + 1}
+            </button>
+          ))}
+        </div>
+      </section>
       <div className="trimaran-content">
         <div className="left">
           <img src={trimaran.versions[version]} className="versionImage" />
@@ -93,13 +91,14 @@ export default function TrimaranView({ trimaran }: any) {
             />
             <Spec label="Nombre de cabines" value={trimaran.specs.cabines} />
           </div>
+          <p style={{ fontStyle: "italic", fontSize: "10px" }}>Architecte : Nicolas PURNU - 3 Lignes Architecture Navale</p>
         </div>
       </div>
       <div className="featureSection">
         {/* BLOC 1 */}
         <div className="featureRow">
           <div className="featureImageWrapper">
-            <img src="/assets/53/3128.jpg" className="featureImage" />
+            <img src="/assets/53/04.jpg" className="featureImage" />
           </div>
 
           <div className="featureText">
@@ -114,14 +113,15 @@ export default function TrimaranView({ trimaran }: any) {
         {/* BLOC 2 (inversé) */}
         <div className="featureRow reverse">
           <div className="featureImageWrapper">
-            <img src="/assets/53/3123.jpg" className="featureImage" />
+            <img src="/assets/53/05.jpg" className="featureImage" />
           </div>
 
           <div className="featureText">
             <h2>Confort à bord</h2>
             <p>
               Des espaces de vie spacieux et lumineux pensés pour la navigation
-              longue durée. Une personnalisation possible pour répondre aux besoins spécifiques de chaque propriétaire.
+              longue durée. Une personnalisation possible pour répondre aux
+              besoins spécifiques de chaque propriétaire.
             </p>
           </div>
         </div>
