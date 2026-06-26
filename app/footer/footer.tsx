@@ -39,9 +39,9 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="footer-bottom">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/conditions-generales">Conditions générales d'utilisation</a>
-        <a href="/politique-confidentialite">Politique de confidentialité</a>
+        <a href="/legalmention">Mentions légales</a>
+        <a href="/cgu">Conditions générales d'utilisation</a>
+        <a href="/confidentiality">Politique de confidentialité</a>
       </div>
     </footer>
   );
